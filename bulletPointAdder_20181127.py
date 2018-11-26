@@ -8,6 +8,9 @@ text = pyperclip.paste()
 # TODO： 業を分割して、'*'を追加する
 lines = text.split('\n')
 for i in range(len(lines)):  # "lines"リストの各要素をループ
-  linex[i] = '* ' + lines[i] # "linesの要素に"* "を追加
+  lines[i] = '* ' + lines[i] # "linesの要素に"* "を追加
+
+import pprint
+pprint.pprint(lines)
 
 pyperclip.copy(text)
