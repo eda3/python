@@ -1,4 +1,4 @@
-####! python3
+#! python3
 # pw.py - パスワード管理プログラム(脆弱性あり)
 
 PASSWORDS = {'email': 'F7minlBDDuvMJuxESSKHFhTxFtjVB6',
