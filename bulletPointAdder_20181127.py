@@ -10,7 +10,6 @@ lines = text.split('\n')
 for i in range(len(lines)):  # "lines"リストの各要素をループ
   lines[i] = '* ' + lines[i] # "linesの要素に"* "を追加
 
-import pprint
-pprint.pprint(lines)
+text = '\n'.join(lines)
 
 pyperclip.copy(text)
