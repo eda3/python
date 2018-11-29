@@ -58,3 +58,7 @@ for quiz_num in range(35):
     quiz_file.write('\n')
 
     # 答えの選択肢を回答ファイルに書く
+    answer_key_file.write('{}.{}\n'.format(q_num + 1, 'ABCD'[answer_options.index(correct_answer)]))
+
+quiz_file.close()
+answer_key_file.close()
