@@ -30,3 +30,11 @@ for groups in phone_regrex.findall(text):
 
 for groups in email_regex.findall(text):
   matches.append(groups[0])
+
+# 検索結果をクリップボードに貼付
+if len(matches) > 0:
+  pyperclip.cpy('\n'.join(matches))
+  print('クリップボードにコピーしました:')
+  print('\n'.join(matches))
+else:
+  print('電話番号やメールアドレスは見つかりませんでした')
