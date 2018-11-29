@@ -28,6 +28,9 @@ for quiz_num in range(35):
   answer_key_file = open('captalsquiz_answers{}.txt'.format(quiz_num + 1), 'w')
 
   # 問題集のヘッダーを記入
+  quiz_file.write('名前:\n\n日付:\n\n学期:\n\n')
+  quiz_file.write((' ' * 20) + '都道府県庁所在地クイズ（問題番号 {})'.format(quiz_num + 1))
+  quiz_file.write('\n\n')
 
   # 都道府県の順番をシャッフル
 
