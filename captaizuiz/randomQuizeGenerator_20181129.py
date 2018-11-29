@@ -24,7 +24,8 @@ capitals = {'北海道': '札幌市', '青森県': '青森市', '岩手県': '�
 # 35個の問題集を作成する
 for quiz_num in range(35):
   # 問題集と回答集のファイルを作成
-  quiz_file = open('captalzuiz{}.txt'.format(quiz_num + 1), 'w')
+  quiz_file = open('captalsquiz{}.txt'.format(quiz_num + 1), 'w')
+  answer_key_file = open('captalsquiz_answers{}.txt'.format(quiz_num + 1), 'w')
 
   # 問題集のヘッダーを記入
 
