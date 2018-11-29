@@ -35,6 +35,21 @@ for quiz_num in range(35):
   # 都道府県の順番をシャッフル
   prefectures = list(capitals.keys())
   random.shuffle(prefectures)
-  print(prefectures)
 
   # 47都道府県をループして、それぞれの問題を作成
+  for q_num in range(len(prefectures)):
+    # 正解を取得
+    correct_answer = capitals[prefectures[q_num]]
+
+    # 不正解の問題を取得
+    wrong_answers = list(capitals.values())
+    del wrong_answers[wrong_answers.index(correct_answer)]
+    wrong_answers = random.sample(wrong_answers, 3)
+
+    # 正解と不正解を混ぜてシャッフル
+    answer_options = wrong_answers + [correct_answer]
+    random.shuffle(answer_options)
+
+    # 問題文と回答選択肢を問題ファイルに書く
+
+    # 答えの選択肢を回答ファイルに書く
