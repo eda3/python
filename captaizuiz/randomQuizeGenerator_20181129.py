@@ -33,5 +33,8 @@ for quiz_num in range(35):
   quiz_file.write('\n\n')
 
   # 都道府県の順番をシャッフル
+  prefectures = list(capitals.keys())
+  random.shuffle(prefectures)
+  print(prefectures)
 
   # 47都道府県をループして、それぞれの問題を作成
