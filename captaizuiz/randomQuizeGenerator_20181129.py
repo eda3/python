@@ -51,5 +51,10 @@ for quiz_num in range(35):
     random.shuffle(answer_options)
 
     # 問題文と回答選択肢を問題ファイルに書く
+    quiz_file.write('{}. {}の都道府県庁所在地は？\n'.format(q_num + 1, prefectures[q_num]))
+    for i in range(4):
+      quiz_file.write(' {}. {}\n'.format('ABCD'[i], answer_options[i]))
+
+    quiz_file.write('\n')
 
     # 答えの選択肢を回答ファイルに書く
