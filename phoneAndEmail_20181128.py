@@ -16,4 +16,6 @@ text = str(pyperclip.paste())
 matches = []
 for groups in phone_regrex.findall(text):
   phone_num = '-'.join([groups[1], groups[3], groups[5]])
-  print(phone_num)
+  if groups[8] != '':
+    phone_num += ' x' + groups[8]
+  matches.append(phone_num)
