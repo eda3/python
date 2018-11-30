@@ -13,6 +13,8 @@ date_pattern = re.compile(r"""
     """, re.VERBOSE)
 
 # カレントディレクトリの全ファイルをループする
+for amer_filename in os.listdir('.'):
+  mo = date_pattern.search(amer_filename)
 
 # 日付のないファイルをスキップする
 
