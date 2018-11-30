@@ -27,6 +27,9 @@ for amer_filename in os.listdir('.'):
   year_part = mo.group(6)
   after_part = mo.group(8)
 
-# 欧州式の日付のファイル名を作る
+  # 欧州式の日付のファイル名を作る
+  euro_filename = before_part + day_part + '-' + month_part + '-' + year_part + after_part
+  print('Renaming "{}" to "{}" ...'.format(amer_filename, euro_filename))
 
-# ファイル名を変更す
+  # ファイル名を変更する
+  shutil.move(amer_filename, euro_filename)
