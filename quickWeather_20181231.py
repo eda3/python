@@ -17,5 +17,16 @@ if len(sys.argv) < 2:
     sys.exit()
 location = ' '.join(sys.argv[1:])
 
+# Define the API key from 'OpenWweathermap.org'
+f = open('.api.txt')
+APPID = f.read()
+with open('.api.txt') as f:
+    APPID = f.read()
+
+# Download JSON data from 'OpenWeatherMap.org' API.
+url = 'http://api.openweathermap.org/data/2.5/forecastdaily?q={}&cnt=3&appid={}'.format(
+    location, APPID)
+response = requests.get(url)
+response.raise_for_status
 
 # Read into Python variable from JSON data.
