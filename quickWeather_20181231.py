@@ -24,9 +24,13 @@ with open('.api.txt') as f:
     APPID = f.read()
 
 # Download JSON data from 'OpenWeatherMap.org' API.
-url = 'http://api.openweathermap.org/data/2.5/forecastdaily?q={}&cnt=3&appid={}'.format(
+url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q={}&cnt=3&appid={}'.format(
     location, APPID)
+logger.debug(url)  # debug
 response = requests.get(url)
 response.raise_for_status
 
+print(response.text)
+
 # Read into Python variable from JSON data.
+# weather_data = json.loads(response)
